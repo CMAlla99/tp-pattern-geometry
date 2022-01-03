@@ -25,10 +25,10 @@ public class Coordinate {
 
     public boolean isEmpty() {
 
-        if (x == Double.NaN) {
+        if (Double.isNaN(x)) {
             return true;
         }
-        if (y == Double.NaN) {
+        if (Double.isNaN(y)) {
             return true;
         }
         return false;

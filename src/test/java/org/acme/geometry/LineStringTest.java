@@ -60,4 +60,11 @@ public class LineStringTest {
 		Assert.assertEquals("Point", l.getPointN(0).getType());
 	}
 
+	@Test
+	public void isEmptyMethod(){
+
+		LineString l = new LineString();
+		Assert.assertTrue(l.isEmpty());
+	}
+
 }

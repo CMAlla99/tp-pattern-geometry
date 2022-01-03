@@ -29,4 +29,11 @@ public class PointTest {
 		Point p = new Point();
 		Assert.assertEquals("Point", p.getType());
 	}
+
+	@Test
+	public void isEmptyMethod(){
+
+		Point p = new Point();
+		Assert.assertTrue(p.isEmpty());
+	}
 }

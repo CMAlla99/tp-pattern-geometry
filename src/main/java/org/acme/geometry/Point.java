@@ -22,4 +22,9 @@ public class Point implements Geometry {
   
         return "Point";
     }
+
+    @Override
+    public boolean isEmpty() {
+        return coordinate.isEmpty();
+    }
 }
