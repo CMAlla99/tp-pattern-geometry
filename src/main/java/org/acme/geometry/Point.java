@@ -12,6 +12,11 @@ public class Point implements Geometry {
         this.coordinate = coordinate;
     }
 
+    public Coordinate getCoordinate() {
+        
+        return this. coordinate;
+    }
+
     @Override
     public String getType() {
   
