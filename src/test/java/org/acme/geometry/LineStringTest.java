@@ -10,7 +10,7 @@ public class LineStringTest {
 	public static final double EPSILON = 1.0e-15;
 
 	public static Point createPointO() {
-		return new Point(new Coordinate());
+		return new Point(new Coordinate(0.0, 0.0));
 	}
 
 	public static Point createPointA() {
