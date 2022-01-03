@@ -1,6 +1,6 @@
 package org.acme.geometry;
 
-public class Point {
+public class Point implements Geometry {
 
     private Coordinate coordinate;
 
@@ -10,5 +10,11 @@ public class Point {
 
     public Point(Coordinate coordinate) {
         this.coordinate = coordinate;
+    }
+
+    @Override
+    public String getType() {
+  
+        return "Point";
     }
 }
