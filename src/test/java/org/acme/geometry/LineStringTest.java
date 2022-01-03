@@ -57,7 +57,7 @@ public class LineStringTest {
 		points.add(createPointO());
 		points.add(createPointA());
 		LineString l = new LineString(points);
-		Assert.assertEquals("Point", l.getPointN(0).getType());
+		Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
 	}
 
 	@Test
@@ -65,6 +65,16 @@ public class LineStringTest {
 
 		LineString l = new LineString();
 		Assert.assertTrue(l.isEmpty());
+	}
+
+	@Test
+	public void translateMethod(){
+
+		List<Point> points = new ArrayList<Point>();
+		points.add(createPointO());
+		LineString l = new LineString(points);
+		l.translate(1.0, 1.0);
+		Assert.assertEquals(1.0, points.get(0).getCoordinate().getX(), EPSILON);
 	}
 
 }

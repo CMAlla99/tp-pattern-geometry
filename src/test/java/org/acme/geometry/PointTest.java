@@ -36,4 +36,12 @@ public class PointTest {
 		Point p = new Point();
 		Assert.assertTrue(p.isEmpty());
 	}
+
+	@Test
+	public void translateMethod(){
+
+		Point p = new Point(new Coordinate(0.0, 0.0));
+		p.translate(1.0, 1.0);
+		Assert.assertEquals(1.0, p.getCoordinate().getX(), EPSILON);
+	}
 }
