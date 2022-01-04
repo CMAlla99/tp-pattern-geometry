@@ -17,10 +17,48 @@ public class Envelope {
 
     public double getXmin() {
         
-        return this.coordinate;
+        if (bottomLeft.getX() <= topRight.getX()) {
+            return bottomLeft.getX();
+        } else {
+            return topRight.getX();
+        }
+    }
+
+    public double getYmin() {
+        
+        if (bottomLeft.getY() <= topRight.getY()) {
+            return bottomLeft.getY();
+        } else {
+            return topRight.getY();
+        }
+    }
+
+    public double getXmax() {
+        
+        if (bottomLeft.getX() >= topRight.getX()) {
+            return bottomLeft.getX();
+        } else {
+            return topRight.getX();
+        }
+    }
+
+    public double getYmax() {
+        
+        if (bottomLeft.getY() >= topRight.getY()) {
+            return bottomLeft.getY();
+        } else {
+            return topRight.getY();
+        }
     }
 
     public boolean isEmpty() {
-        return coordinate.isEmpty();
+
+        if (bottomLeft.isEmpty()) {
+            return true;
+        } else if (topRight.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
