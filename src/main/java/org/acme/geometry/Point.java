@@ -38,15 +38,6 @@ public class Point extends AbstractGeometry {
     }
 
     @Override
-    public Envelope getEnvelope() {
-        
-        EnvelopeBuilder builder = new EnvelopeBuilder();
-        builder.insert(coordinate);
-		Envelope envelope = builder.build();
-        return envelope;
-    }
-
-    @Override
     public Geometry clone() {
 
         return new Point(coordinate);
@@ -55,13 +46,5 @@ public class Point extends AbstractGeometry {
     @Override
     public void accept(GeometryVisitor visitor) {
         visitor.visit(this);
-    }
-
-    @Override
-    public String asText() {
-        
-        WktVisitor visitor = new WktVisitor();
-		this.accept(visitor);
-        return visitor.getResult();
     }
 }
