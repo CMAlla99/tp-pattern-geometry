@@ -98,4 +98,14 @@ public class LineStringTest {
 		Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
 	}
 
+	@Test
+	public void asTextMethod(){
+
+		List<Point> points = new ArrayList<Point>();
+		points.add(createPointO());
+		points.add(createPointA());
+		LineString l = new LineString(points);
+		Assert.assertEquals("LINESTRING(0.0 0.0,1.0 1.0)", l.asText());
+	}
+
 }
