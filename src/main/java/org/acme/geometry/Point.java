@@ -56,12 +56,4 @@ public class Point extends AbstractGeometry {
     public void accept(GeometryVisitor visitor) {
         visitor.visit(this);
     }
-
-    @Override
-    public String asText() {
-        
-        WktVisitor visitor = new WktVisitor();
-		this.accept(visitor);
-        return visitor.getResult();
-    }
 }
