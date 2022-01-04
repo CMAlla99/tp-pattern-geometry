@@ -38,6 +38,15 @@ public class Point implements Geometry {
     }
 
     @Override
+    public Envelope getEnvelope() {
+        
+        EnvelopeBuilder builder = new EnvelopeBuilder();
+        builder.insert(coordinate);
+		Envelope envelope = builder.build();
+        return envelope;
+    }
+
+    @Override
     public Geometry clone() {
 
         return new Point(coordinate);

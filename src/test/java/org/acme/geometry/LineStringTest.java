@@ -78,6 +78,16 @@ public class LineStringTest {
 	}
 
 	@Test
+	public void envelopeMethod(){
+
+		List<Point> points = new ArrayList<Point>();
+		points.add(createPointO());
+		points.add(createPointA());
+		LineString l = new LineString(points);
+		Assert.assertEquals(0.0, l.getEnvelope().getXmin(), EPSILON);
+	}
+
+	@Test
 	public void cloneMethod(){
 
 		List<Point> points = new ArrayList<Point>();

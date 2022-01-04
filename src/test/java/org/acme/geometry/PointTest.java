@@ -46,6 +46,13 @@ public class PointTest {
 	}
 
 	@Test
+	public void envelopeMethod(){
+
+		Point p = new Point(new Coordinate(0.0, 1.0));
+		Assert.assertEquals(0.0, p.getEnvelope().getXmin(), EPSILON);
+	}
+
+	@Test
 	public void cloneMethod(){
 
 		Point p1 = new Point(new Coordinate(0.0, 0.0));
