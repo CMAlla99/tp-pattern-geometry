@@ -41,6 +41,4 @@ public class GeometryWithCachedEnvelope implements Geometry {
     public void accept(GeometryVisitor visitor) {
         original.accept(visitor);
     }
-
-    
 }
