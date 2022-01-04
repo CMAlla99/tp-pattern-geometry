@@ -35,6 +35,7 @@ public class Point extends AbstractGeometry {
             coordinate.getX() + dx,
             coordinate.getY() + dy
          );
+        //triggerChange();
     }
 
     @Override

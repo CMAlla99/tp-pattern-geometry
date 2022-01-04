@@ -47,6 +47,7 @@ public class LineString extends AbstractGeometry {
         for(Point p : points) {
             p.translate(dx, dy);
         }
+        //triggerChange();
     }
 
     @Override
