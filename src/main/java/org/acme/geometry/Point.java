@@ -51,4 +51,9 @@ public class Point implements Geometry {
 
         return new Point(coordinate);
     }
+
+    @Override
+    public void accept(GeometryVisitor visitor) {
+        visitor.visit(this);
+    }
 }

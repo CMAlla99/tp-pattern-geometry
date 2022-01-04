@@ -70,4 +70,9 @@ public class LineString implements Geometry {
         }
         return newPoints;
     }
+
+    @Override
+    public void accept(GeometryVisitor visitor) {
+        visitor.visit(this);
+    }
 }
