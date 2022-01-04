@@ -10,9 +10,28 @@ public class EnvelopeBuilderTest {
 	@Test
 	public void testDefaultConstructor(){
 
-		//Point p = new Point();
-		//Assert.assertEquals(Double.NaN, p.getCoordinate().getX(), EPSILON);
-		//Assert.assertEquals(Double.NaN, p.getCoordinate().getY(), EPSILON);
+		EnvelopeBuilder builder = new EnvelopeBuilder();
+		Assert.assertEquals(0, builder.getxVals().size());
+		Assert.assertEquals(0, builder.getyVals().size());
 	}
 
+	@Test
+	public void insertMethod(){
+
+		EnvelopeBuilder builder = new EnvelopeBuilder();
+		builder.insert(new Coordinate(0.0,1.0));
+		Assert.assertEquals(1, builder.getxVals().size());
+	}
+
+	@Test
+	public void buildMethod(){
+
+		EnvelopeBuilder builder = new EnvelopeBuilder();
+		builder.insert(new Coordinate(0.0,1.0));
+		builder.insert(new Coordinate(2.0,0.0));
+		builder.insert(new Coordinate(1.0,3.0));
+		Envelope result = builder.build();
+		Assert.assertFalse(result.isEmpty());
+		Assert.assertEquals(0.0, result.getXmin(), EPSILON);
+	}
 }

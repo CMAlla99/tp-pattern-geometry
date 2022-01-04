@@ -15,6 +15,16 @@ public class EnvelopeBuilder {
         this.yVals = new ArrayList<Double>();
     }
 
+    public List<Double> getxVals() {
+
+        return this.xVals;
+    }
+
+    public List<Double> getyVals() {
+
+        return this.yVals;
+    }
+
     public void insert(Coordinate coordinate) {
         
         this.xVals.add(coordinate.getX());
