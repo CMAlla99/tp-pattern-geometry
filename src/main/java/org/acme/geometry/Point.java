@@ -14,7 +14,7 @@ public class Point implements Geometry {
 
     public Coordinate getCoordinate() {
         
-        return this. coordinate;
+        return this.coordinate;
     }
 
     @Override
