@@ -33,7 +33,7 @@ public class LogGeometryVisitorTest {
 		// result contiendra ce qui est écrit dans la console
 		String result = os.toString("UTF8");
 
-		Assert.assertEquals("Je suis un point avec x=2.0 et y=3.0", result);
+		Assert.assertEquals("Je suis un point avec x=2.0 et y=3.0", result.trim());
 	}
 
 	@Test
@@ -51,7 +51,6 @@ public class LogGeometryVisitorTest {
 		// result contiendra ce qui est écrit dans la console
 		String result = os.toString("UTF8");
 
-		Assert.assertEquals("Je suis une polyligne définie par 2 point(s)", result);
+		Assert.assertEquals("Je suis une polyligne définie par 2 point(s)", result.trim());
 	}
-
 }
