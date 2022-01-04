@@ -84,8 +84,8 @@ public class LineStringTest {
 		points.add(createPointO());
 		LineString l = new LineString(points);
 		Geometry copy = l.clone();
-		//copy.translate(1.0, 1.0);
-		//Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+		copy.translate(1.0, 1.0);
+		Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
 	}
 
 }
