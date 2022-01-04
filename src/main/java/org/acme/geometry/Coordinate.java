@@ -2,8 +2,8 @@ package org.acme.geometry;
 
 public class Coordinate {
 
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     public Coordinate() {
         this.x = Double.NaN;
@@ -21,14 +21,6 @@ public class Coordinate {
 
     public double getY() {
         return this.y;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
     }
 
     public boolean isEmpty() {
